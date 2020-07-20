@@ -1,0 +1,170 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* HEADER */
+
+header {
+    background-image: url(../img/Header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* MENU */
+
+div.MenuOpen {
+    padding: 0;
+    height: 20vh;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    clip-path: circle(8% at 50% -15%);
+    background-color: transparent;
+    z-index: 2;
+    position: relative;
+    background-color: rgb(25, 26, 25);
+}
+
+@media (max-width: 1000px) {
+    div.MenuOpen {
+        clip-path: circle(8% at 50% -5%);
+    }
+}
+
+@media (max-width: 800px) {
+    div.MenuOpen {
+        clip-path: circle(8% at 50% 0%);
+    }
+}
+
+@media (max-width: 480px) {
+    div.MenuOpen {
+        clip-path: circle(8% at 50% 5%);
+    }
+}
+
+div.MenuOpen i {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 15px 0;
+}
+
+@media (max-width: 1200px) {
+    div.MenuOpen i {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    div.MenuOpen i {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    div.MenuOpen i {
+        padding: 2px 0;
+    }
+}
+
+div.MenuHover {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100% at 50% 0%);
+    background-color: rgb(25, 26, 25);
+    animation: Bg 1s ease 0s;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    div.MenuHover {
+        clip-path: circle(100% at 50% 3%);
+    }
+}
+
+.MenuHover2 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(8% at 50% -15%);
+    background-color: rgb(25, 26, 25);
+    animation: Bg2 .6s ease 0s;
+    display: none;
+}
+
+div.MenuHover ul,
+div.MenuHover2 ul {
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.MenuHover ul li,
+div.MenuHover2 ul li {
+    list-style: none;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.MenuHover ul li a,
+div.MenuHover2 ul li a {
+    color: #ffffff;
+    font-size: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+div.MenuHover ul li a:hover {
+    font-size: 80px;
+    letter-spacing: 5px;
+}
+
+
+/* ANIMACION MENU */
+
+@keyframes Bg {
+    0% {
+        clip-path: circle(8% at 50% -3%);
+        background-color: rgb(25, 26, 25);
+    }
+    100% {
+        clip-path: circle(100% at 50% 0%);
+        background-color: rgb(25, 26, 25);
+    }
+}
+
+@keyframes Bg2 {
+    0% {
+        clip-path: circle(100% at 50% 0%);
+        background-color: rgb(25, 26, 25);
+    }
+    100% {
+        clip-path: circle(8% at 50% -3%);
+        background-color: rgb(25, 26, 25);
+    }
+}
